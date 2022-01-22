@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Darker Text for YouTube",
+    "Description": "Makes text darker for YouTube when using Dark Theme",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "temp.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.youtube.com/*"
+            ],
+            "js": [
+                "darker.js"
+            ]
+        }
+    ]
+}
