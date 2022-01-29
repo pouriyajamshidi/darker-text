@@ -13,6 +13,9 @@
             ],
             "js": [
                 "darker.js"
+            ],
+            "css": [
+                "darker.css"
             ]
         }
     ]

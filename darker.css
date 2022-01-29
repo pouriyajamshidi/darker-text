@@ -1,0 +1,7 @@
+body {
+    --yt-spec-text-primary: #ccc !important;
+}
+
+#content-text.ytd-comment-renderer {
+    font-size: 1.6rem !important;
+}
