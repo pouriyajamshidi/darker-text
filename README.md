@@ -1,6 +1,6 @@
 # Darker Text For YouTube
 
-This extension reduces eye-strain by decreasing the sharpness of the white text on YouTube when using dark theme.
+This extension reduces eye-strain by decreasing the sharpness of the white text on YouTube when using dark theme as well as increasing the font size of the comments by one.
 
 ## NOTE
 
