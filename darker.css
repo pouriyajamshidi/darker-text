@@ -5,3 +5,7 @@ body {
 #content-text.ytd-comment-renderer {
     font-size: 1.6rem !important;
 }
+
+ytd-expander.ytd-video-secondary-info-renderer {
+    font-size: 1.5rem !important;
+}
