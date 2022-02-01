@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Darker Text for YouTube",
-    "Description": "Makes text darker for YouTube when using Dark Theme",
+    "description": "Makes text darker for YouTube when using Dark Theme",
     "version": "1.2",
     "browser_action": {
         "default_icon": "./icons/main.png"
