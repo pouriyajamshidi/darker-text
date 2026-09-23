@@ -4,9 +4,18 @@
 
 const TARGET_CONTRAST = 7; // WCAG AAA for body text. Lower it for dimmer text.
 const MAX_BLEND = 0.45; // never blend more than this far toward the background
-const MIN_LUMINANCE = 0.7; // how bright text must be before we touch it
+const MIN_LUMINANCE = 0.5; // how bright text must be before we touch it (~#bcbcbc)
 const MARK = "data-darker-text";
-const SKIP = new Set(["SCRIPT", "STYLE", "NOSCRIPT", "SVG", "CANVAS", "IFRAME"]);
+// localName, not tagName: it is lowercase for HTML and matches SVG as authored.
+const SKIP = new Set([
+    "script",
+    "style",
+    "noscript",
+    "title",
+    "svg",
+    "canvas",
+    "iframe",
+]);
 
 function parse(color) {
     const parts = color.match(/[\d.]+/g);
@@ -81,11 +90,11 @@ function hasOwnText(element) {
 // We color the element that owns the text, not its children: an inherited color
 // is the weakest kind, so anything the site deliberately colors still wins.
 function scan(root) {
-    if (!(root instanceof Element) || SKIP.has(root.tagName)) return;
+    if (!(root instanceof Element) || SKIP.has(root.localName)) return;
 
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, {
         acceptNode: (element) =>
-            SKIP.has(element.tagName)
+            SKIP.has(element.localName)
                 ? NodeFilter.FILTER_REJECT
                 : NodeFilter.FILTER_ACCEPT,
     });
