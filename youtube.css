@@ -1,7 +1,5 @@
-body {
-    --yt-spec-text-primary: #ccc !important;
-}
-
+/* Not about color: the script already dims YouTube's text. This is just the
+   comment and description sizes, which are a touch small by default. */
 #content-text.ytd-comment-renderer {
     font-size: 1.6rem !important;
 }
